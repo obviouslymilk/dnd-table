@@ -40,7 +40,14 @@ local function setUninteractable()
     end
 end
 
+local function hideGamemasterZones(...)
+    for _,zoneGUID in ipairs({...}) do
+        getObjectFromGUID(zoneGUID).getChild('TransparentCube').getComponent("MeshRenderer").set('forceRenderingOff', true)
+    end
+end
+
 function onLoad()
     setUninteractable()
     setupSheets()
+    hideGamemasterZones("eaef99","6192e7")
 end
