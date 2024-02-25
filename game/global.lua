@@ -1,4 +1,5 @@
 local characterSheetUI = require("ui.character_sheet")
+local lunajson = require('lib.lunajson')
 
 local UNITERACTABLE_GUID = {
     "8f9d8c",
@@ -50,4 +51,5 @@ function onLoad()
     setUninteractable()
     setupSheets()
     hideGamemasterZones("eaef99","6192e7")
+    local dude = lunajson.encode({})
 end
