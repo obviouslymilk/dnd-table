@@ -29,8 +29,6 @@ function onLoad()
     self.UI.setCustomAssets(FONT_CUSTOM_ASSETS)
 
     Wait.frames(function ()
-        self.UI.setXml(characterSheet % {
-            text="Кризикки"
-        })
+        self.UI.setXml(characterSheet)
     end, 1)
 end
