@@ -1,13 +1,14 @@
 require('utils.interpolation')
 
 local FONTS_UI = require('ui.fonts')
-local CHARACTER_SHEET_UI = require('ui.character-sheet')
+
+local UiBundler = require('ui-bundler')
 
 
 function onLoad()
     self.UI.setCustomAssets(FONTS_UI)
 
     Wait.frames(function ()
-        self.UI.setXml(CHARACTER_SHEET_UI)
+        self.UI.setXml(UiBundler.get())
     end, 2)
 end
