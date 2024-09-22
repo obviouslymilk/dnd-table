@@ -1,18 +1,6 @@
 require('utils.interpolation')
 local characterSheet = require('ui.character')
 
-
--- local function mapUiForColors()
---     local mappedUi = ''
---     for i, color in ipairs(COLORS) do
---        mappedUi = mappedUi .. characterUi % {
---         color = color
---        }
---     end
-
---     return mappedUi
--- end
-
 local FONT_CUSTOM_ASSETS = {
     {
         name = "bold",
@@ -24,11 +12,27 @@ local FONT_CUSTOM_ASSETS = {
     }
 }
 
+--- Select character sheet panel
+---@param player tts__Player
+---@param arg string
+function SelectPanel(player, arg)
+    local isVisible = self.UI.getAttribute('white_inv', 'active')
+    if (isVisible == 'false') then
+        self.UI.setAttribute('white_inv', 'active', 'true')
+        self.UI.setAttribute('white_char', 'active', 'false')
+    else
+        self.UI.setAttribute('white_inv', 'active', 'false')
+        self.UI.setAttribute('white_char', 'active', 'true')
+    end
+end
+
 
 function onLoad()
     self.UI.setCustomAssets(FONT_CUSTOM_ASSETS)
 
     Wait.frames(function ()
-        self.UI.setXml(characterSheet)
-    end, 1)
+        self.UI.setXml(characterSheet % {
+            color = "white"
+        })
+    end, 2)
 end
