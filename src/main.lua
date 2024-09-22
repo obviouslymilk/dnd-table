@@ -16,14 +16,26 @@ local FONT_CUSTOM_ASSETS = {
 ---@param player tts__Player
 ---@param arg string
 function SelectPanel(player, arg)
-    local isVisible = self.UI.getAttribute('white_inv', 'active')
+    local isVisible = self.UI.getAttribute(arg .. '_inv', 'active')
     if (isVisible == 'false') then
-        self.UI.setAttribute('white_inv', 'active', 'true')
-        self.UI.setAttribute('white_char', 'active', 'false')
+        self.UI.setAttribute(arg .. '_inv', 'active', 'true')
+        self.UI.setAttribute(arg .. '_char', 'active', 'false')
     else
-        self.UI.setAttribute('white_inv', 'active', 'false')
-        self.UI.setAttribute('white_char', 'active', 'true')
+        self.UI.setAttribute(arg .. '_inv', 'active', 'false')
+        self.UI.setAttribute(arg .. '_char', 'active', 'true')
     end
+end
+
+local COLORS = {"white", "red"}
+local function mapUiForColors()
+    local mappedUi = ''
+    for i, color in ipairs(COLORS) do
+       mappedUi = mappedUi .. characterSheet % {
+        color = color
+       }
+    end
+
+    return mappedUi
 end
 
 
@@ -31,8 +43,6 @@ function onLoad()
     self.UI.setCustomAssets(FONT_CUSTOM_ASSETS)
 
     Wait.frames(function ()
-        self.UI.setXml(characterSheet % {
-            color = "white"
-        })
+        self.UI.setXml(mapUiForColors())
     end, 2)
 end

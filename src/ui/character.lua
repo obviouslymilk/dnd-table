@@ -1,5 +1,6 @@
 return [[
     <VerticalLayout
+        visibility="${color}"
         width="500"
         height="600"
         color="${color}"
@@ -10,8 +11,8 @@ return [[
         returnToOriginalPositionWhenReleased="false"
     >
         <HorizontalLayout spacing="12" childForceExpandHeight="false">
-            <Button minHeight="50" onClick="SelectPanel('character')">Персонаж</Button>
-            <Button minHeight="50" onClick="SelectPanel('inventory')">Инвентарь</Button>
+            <Button minHeight="50" onClick="SelectPanel(${color})">Персонаж</Button>
+            <Button minHeight="50" onClick="SelectPanel(${color})">Инвентарь</Button>
         </HorizontalLayout>
         <Text id="${color}_char" font="bold">Лист персонажа</Text>
         <Text id="${color}_inv" active="false">Инвентарь персонажа</Text>
