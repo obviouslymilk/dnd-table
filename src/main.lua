@@ -1,12 +1,12 @@
 require('utils.interpolation')
 
-local FONTS_UI = require('ui.fonts')
+local ASSETS_UI = require('ui.assets')
 
 local UiBundler = require('ui-bundler')
 
 
 function onLoad()
-    self.UI.setCustomAssets(FONTS_UI)
+    self.UI.setCustomAssets(ASSETS_UI)
 
     Wait.frames(function ()
         self.UI.setXml(UiBundler.get())
