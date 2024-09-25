@@ -1,3 +1,7 @@
+-- &#xA; новая строка
+-- &lt; открывающая скобка
+-- &gt; закрывающая скобка
+-- &lt;&gt;
 return [[
     <Panel
         width="500"
@@ -18,13 +22,6 @@ return [[
 
         <HorizontalLayout padding="12 12 24 12" spacing="12" height="600" rectAlignment="LowerCenter">
             <VerticalLayout image="frame">
-                <Text>Hello!</Text>
-                <Text>Hello!</Text>
-            </VerticalLayout>
-
-            <VerticalLayout image="frame">
-                <Text>Hello!</Text>
-                <Text>Hello!</Text>
             </VerticalLayout>
         </HorizontalLayout>
     </Panel>

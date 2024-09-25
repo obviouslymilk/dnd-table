@@ -1,6 +1,6 @@
 return [[
     <Defaults>
-        <Text color="#09090b" fontSize="14" />
+        <Text color="#09090b" fontSize="14" tooltipBackgroundColor="black"/>
         <Button font="bold" />
         <Panel color="#ffffff" />
         <HorizontalLayout color="#ffffff" />

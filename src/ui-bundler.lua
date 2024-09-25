@@ -13,11 +13,16 @@ local function bundleCharacterSheets()
     uiXmlBundle = uiXmlBundle .. CHARACTER_SHEET_UI
 end
 
+local function replaceSpecialCharacters()
+    uiXmlBundle = uiXmlBundle:gsub("\\n", "&#xA;")
+end
+
 --- Returns bundled UI with defaults and player specified interface.
 ---@return string
 UiBundler.get = function ()
     bundleDefaults()
     bundleCharacterSheets()
+    replaceSpecialCharacters()
     return uiXmlBundle
 end
 
