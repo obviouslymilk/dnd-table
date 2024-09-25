@@ -12,6 +12,20 @@ return [[
             <Button class="sheet-tab" tooltip="Заклинания" icon="spell-icon" />
         </VerticalLayout>
 
-        <Image image="cover" height="100" raycastTarget="false" rectAlignment="UpperLeft" />
+        <Panel image="cover" height="100" raycastTarget="false" rectAlignment="UpperLeft">
+            <Text color="white" font="bold" fontSize="20">ИМЯ ПЕРСОНАЖА</Text>
+        </Panel>
+
+        <HorizontalLayout padding="12 12 24 12" spacing="12" height="600" rectAlignment="LowerCenter">
+            <VerticalLayout image="frame">
+                <Text>Hello!</Text>
+                <Text>Hello!</Text>
+            </VerticalLayout>
+
+            <VerticalLayout image="frame">
+                <Text>Hello!</Text>
+                <Text>Hello!</Text>
+            </VerticalLayout>
+        </HorizontalLayout>
     </Panel>
 ]]
