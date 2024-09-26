@@ -9,6 +9,8 @@ return [[
         allowDragging="true"
         returnToOriginalPositionWhenReleased="false"
         restrictDraggingToParentBounds="false"
+        id="${color}_sheet"
+        visibility="${color}"
     >
         <VerticalLayout ignoreLayout="true" offsetXY="271 0" height="650" width="42" color="none" childForceExpandHeight="false" spacing="6">
             <Button class="sheet-tab" tooltip="Персонаж" icon="char-icon"/>

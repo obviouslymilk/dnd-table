@@ -1,3 +1,6 @@
+require('utils.interpolation')
+
+
 local UiBundler = {}
 
 local DEFAULTS_UI = require('ui.defaults')
@@ -23,6 +26,10 @@ UiBundler.get = function ()
     bundleDefaults()
     bundleCharacterSheets()
     replaceSpecialCharacters()
+
+    uiXmlBundle = uiXmlBundle % {
+        color = "White"
+    }
     return uiXmlBundle
 end
 
