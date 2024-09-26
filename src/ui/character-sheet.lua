@@ -20,7 +20,7 @@ return [[
         </VerticalLayout>
 
         <Panel image="cover" height="100" raycastTarget="false" rectAlignment="UpperLeft">
-            <HorizontalLayout>
+            <HorizontalLayout offsetXY="0 10">
                 <VerticalLayout childForceExpandHeight="false" childAlignment="MiddleCenter">
                     <InputField class="sheet-header-input"
                         placeholderText="ИМЯ ПЕРСОНАЖА"
@@ -43,7 +43,18 @@ return [[
             </HorizontalLayout>
         </Panel>
 
-        <HorizontalLayout padding="12 12 24 12" spacing="12" height="600" rectAlignment="LowerCenter">
+        <GridLayout height="44" rectAlignment="UpperCenter" offsetXY="0 -75" cellSize="56 64" childAlignment="MiddleCenter" spacing="24 0">
+            <Panel image="stat-frame" />
+            <Panel image="stat-frame" />
+            <Panel image="stat-frame" />
+            <Panel image="stat-frame" />
+            <Panel image="stat-frame" />
+            <Panel image="stat-frame" />
+        </GridLayout>
+
+        <HorizontalLayout padding="6 6 36 6" spacing="6" height="600" rectAlignment="LowerCenter">
+            <VerticalLayout image="frame">
+            </VerticalLayout>
             <VerticalLayout image="frame">
             </VerticalLayout>
         </HorizontalLayout>

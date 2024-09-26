@@ -1,11 +1,11 @@
 return {
     {
-        type = 0,
+        type = 1,
         name = "bold",
         url = "http://cloud-3.steamusercontent.com/ugc/2333495943854237911/8287105B99E942AF915AA0D53285BBBADCB13E33/"
     },
     {
-        type = 0,
+        type = 1,
         name = "regular",
         url = "http://cloud-3.steamusercontent.com/ugc/2333496578698759898/3F417EDC5CF86F7B9BBFF71066F043672154EE4D/"
     },
@@ -34,6 +34,11 @@ return {
         type = 0,
         name = "spell-icon",
         url = "https://steamusercontent-a.akamaihd.net/ugc/2462995990936460349/85D99E5C0A4616B17FF116BA25FFCE9D1173C47C/"
+    },
+    {
+        type = 0,
+        name = "stat-frame",
+        url = "https://steamusercontent-a.akamaihd.net/ugc/2462995990941864058/2AE73E50E685EE38578A89D9AEEC7E16067B0273/"
     },
     {
         type = 1,
