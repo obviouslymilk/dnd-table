@@ -25,6 +25,7 @@ return [[
             <HorizontalLayout offsetXY="0 10">
                 <VerticalLayout childForceExpandHeight="false" childAlignment="MiddleCenter">
                     <InputField class="sheet-header-input"
+                        id="${color}_name"
                         placeholderText="ИМЯ ПЕРСОНАЖА"
                         font="bold"
                         fontSize="20"
@@ -33,6 +34,7 @@ return [[
                         textOffset="20 0 0 0"
                     />
                     <InputField
+                        id="${color}_class"
                         class="sheet-header-input"
                         placeholder="Класс"
                         textAlignment="UpperLeft"
@@ -49,33 +51,33 @@ return [[
             <Panel image="stat-frame"
             >
                 <Text class="stat-name">Сил</Text>
-                <Text class="stat-mod">-1</Text>
-                <Text class="stat-value">9</Text>
+                <Text id="${color}_str_mod" class="stat-mod">-1</Text>
+                <Text id="${color}_str_v" class="stat-value">9</Text>
             </Panel>
             <Panel image="stat-frame">
                 <Text class="stat-name">Лов</Text>
-                <Text class="stat-mod">+2</Text>
-                <Text class="stat-value">15</Text>
+                <Text id="${color}_dex_mod" class="stat-mod">-1</Text>
+                <Text id="${color}_dex_v" class="stat-value">9</Text>
             </Panel>
             <Panel image="stat-frame">
                 <Text class="stat-name">Тел</Text>
-                <Text class="stat-mod">+0</Text>
-                <Text class="stat-value">10</Text>
+                <Text id="${color}_con_mod" class="stat-mod">-1</Text>
+                <Text id="${color}_con_v" class="stat-value">9</Text>
             </Panel>
             <Panel image="stat-frame">
                 <Text class="stat-name">Инт</Text>
-                <Text class="stat-mod">+2</Text>
-                <Text class="stat-value">14</Text>
+                <Text id="${color}_int_mod" class="stat-mod">-1</Text>
+                <Text id="${color}_int_v" class="stat-value">9</Text>
             </Panel>
             <Panel image="stat-frame">
                 <Text class="stat-name">Мдр</Text>
-                <Text class="stat-mod">+1</Text>
-                <Text class="stat-value">12</Text>
+                <Text id="${color}_wis_mod" class="stat-mod">-1</Text>
+                <Text id="${color}_wis_v" class="stat-value">9</Text>
             </Panel>
             <Panel image="stat-frame">
                 <Text class="stat-name">Хар</Text>
-                <Text class="stat-mod">-1</Text>
-                <Text class="stat-value">9</Text>
+                <Text id="${color}_chr_mod" class="stat-mod">-1</Text>
+                <Text id="${color}_chr_v" class="stat-value">9</Text>
             </Panel>
         </GridLayout>
 
@@ -86,9 +88,111 @@ return [[
                     <Cell columnSpan="3"><Text font="bold" alignment="UpperCenter">НАВЫКИ</Text></Cell>
                 </Row>
 
-                <Row tooltipPosition="Left" tooltip="&lt;size=14&gt;Атлетические действия&lt;/size&gt;&#xA;&#xA;Проверки Силы (Атлетика) покрывают разнообразные&#xA;ситуации, в которых вы лазаете, прыгаете или плаваете.">
-                    <Cell><Button color="">O</Button></Cell>
-                    <Cell><Text font="regular"><b>Акробатика</b> (Лов)</Text></Cell>
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Акробатика</b> (Лов)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Анализ</b> (Инт)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Атлетика</b> (Сил)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Восприятие</b> (Муд)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Выживание</b> (Муд)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Выступление</b> (Хар)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Запугивание</b> (Хар)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>История</b> (Инт)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Ловкость рук</b> (Лов)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Магия</b> (Инт)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Медицина</b> (Муд)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Обман</b> (Хар)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Природа</b> (Инт)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" fontSize="12" alignment="MiddleLeft"><b>Проницательность</b> (Муд)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Религия</b> (Инт)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Скрытность</b> (Лов)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Убеждение</b> (Хар)</Text></Cell>
+                    <Cell><Text font="bold" text="+0"/></Cell>
+                </Row>
+
+                <Row>
+                    <Cell><Button color="" icon="noskill-icon"/></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Дрессировка</b> (Муд)</Text></Cell>
                     <Cell><Text font="bold" text="+0"/></Cell>
                 </Row>
             </TableLayout>
