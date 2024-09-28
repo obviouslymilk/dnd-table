@@ -17,7 +17,7 @@ return [[
         <TableLayout
             class="sheet-table"
             image="frame"
-            padding="12 12 6 6"
+            padding="10 10 6 6"
             columnWidths="24 0 36"
             cellBackgroundImage=""
             cellBackgroundColor=""
