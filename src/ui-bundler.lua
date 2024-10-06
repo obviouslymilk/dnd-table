@@ -1,6 +1,5 @@
 require('utils.interpolation')
 
-
 local UiBundler = {}
 
 local DEFAULTS_UI = require('ui.defaults')

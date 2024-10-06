@@ -168,7 +168,7 @@ return [[
 
                 <Row>
                     <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" fontSize="12" alignment="MiddleLeft"><b>Проницательность</b> (Муд)</Text></Cell>
+                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Проницат-ть</b> (Муд)</Text></Cell>
                     <Cell><Text font="bold" text="+0"/></Cell>
                 </Row>
 
