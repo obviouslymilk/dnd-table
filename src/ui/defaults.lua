@@ -3,6 +3,7 @@ return [[
         <Tooltip tooltipPosition="Right" tooltipBorderColor="#ffffff" tooltipTextColor="#ffffff" tooltipBackgroundColor="#000000" />
 
         <Text color="#09090b" fontSize="14"/>
+        <Text class="small" fontSize="12" />
         <Button font="bold"/>
         <Panel />
 
@@ -24,6 +25,6 @@ return [[
             rowBackgroundColor=""
             useAlternateRowBackgroundColors="true"
             rowBackgroundColorAlternate="#f5f5f5"
-        /> 
+        />
     </Defaults>
 ]]

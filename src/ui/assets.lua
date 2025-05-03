@@ -53,5 +53,10 @@ return {
         type = 0,
         name = "noskill-icon",
         url = "https://steamusercontent-a.akamaihd.net/ugc/2462995990950387534/CCBE934821366405192B00850BCC6CDBDBAF322B/"
+    },
+    {
+        type = 0,
+        name = "armor-frame",
+        url = "https://steamusercontent-a.akamaihd.net/ugc/37822898894598013/19C58D2F44E57CA4946B2D88A9682E1B5C28C726/"
     }
 }

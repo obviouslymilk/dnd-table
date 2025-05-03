@@ -11,4 +11,5 @@ function onLoad()
     Wait.frames(function ()
         self.UI.setXml(UiBundler.get())
     end, 2)
+
 end

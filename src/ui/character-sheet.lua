@@ -21,6 +21,7 @@ return [[
             <Button class="sheet-tab" tooltip="Заклинания" icon="spell-icon" />
         </VerticalLayout>
 
+
         <Panel image="cover" height="100" raycastTarget="false" rectAlignment="UpperLeft">
             <HorizontalLayout offsetXY="0 10">
                 <VerticalLayout childForceExpandHeight="false" childAlignment="MiddleCenter">
@@ -38,14 +39,17 @@ return [[
                         class="sheet-header-input"
                         placeholder="Класс"
                         textAlignment="UpperLeft"
-                        characterLimit="20"
+                        characterLimit="30"
                         textOffset="20 0 0 0"
                         textColor="#a3a3a3"
                     />
                 </VerticalLayout>
-                <Panel></Panel>
+                <Panel>
+                    <Text>УРОВЕНЬ</Text>
+                </Panel>
             </HorizontalLayout>
         </Panel>
+
 
         <GridLayout height="44" rectAlignment="UpperCenter" offsetXY="0 -75" cellSize="55 63" childAlignment="MiddleCenter" spacing="24 0">
             <Panel image="stat-frame"
@@ -81,123 +85,201 @@ return [[
             </Panel>
         </GridLayout>
 
+
         <HorizontalLayout padding="6 6 36 6" spacing="6" height="600" rectAlignment="LowerCenter">
-            <TableLayout class="sheet-table"> 
-                
-                <Row preferredHeight="24" dontUseTableRowBackground="true">
-                    <Cell columnSpan="3"><Text font="bold" alignment="UpperCenter">НАВЫКИ</Text></Cell>
-                </Row>
+            <Canvas>
+                <TableLayout class="sheet-table">
+                    <Row preferredHeight="24" dontUseTableRowBackground="true">
+                        <Cell columnSpan="3"><Text font="bold" alignment="UpperCenter">НАВЫКИ</Text></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Акробатика</b> (Лов)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Акробатика</b> (Лов)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Анализ</b> (Инт)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Анализ</b> (Инт)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Атлетика</b> (Сил)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Атлетика</b> (Сил)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Восприятие</b> (Муд)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Восприятие</b> (Муд)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Выживание</b> (Муд)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Выживание</b> (Муд)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Выступление</b> (Хар)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Выступление</b> (Хар)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Запугивание</b> (Хар)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Запугивание</b> (Хар)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>История</b> (Инт)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>История</b> (Инт)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Ловкость рук</b> (Лов)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Ловкость рук</b> (Лов)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Магия</b> (Инт)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Магия</b> (Инт)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Медицина</b> (Муд)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Медицина</b> (Муд)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Обман</b> (Хар)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Обман</b> (Хар)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Природа</b> (Инт)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Природа</b> (Инт)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Проницат-ть</b> (Муд)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Проницат-ть</b> (Муд)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Религия</b> (Инт)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Религия</b> (Инт)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Скрытность</b> (Лов)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Скрытность</b> (Лов)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Убеждение</b> (Хар)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Убеждение</b> (Хар)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
 
-                <Row>
-                    <Cell><Button color="" icon="noskill-icon"/></Cell>
-                    <Cell><Text font="regular" alignment="MiddleLeft"><b>Дрессировка</b> (Муд)</Text></Cell>
-                    <Cell><Text font="bold" text="+0"/></Cell>
-                </Row>
-            </TableLayout>
-            <VerticalLayout image="frame">
-            </VerticalLayout>
+                    <Row>
+                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Дрессировка</b> (Муд)</Text></Cell>
+                        <Cell><Text font="bold" text="+0"/></Cell>
+                    </Row>
+                </TableLayout>
+            </Canvas>
+
+            <Canvas>
+                <TableLayout cellSpacing="6">
+                    <!-- .............. СПАСБРОСКИ .............. -->
+                    <Row preferredHeight="125">
+                        <VerticalLayout childForceExpandHeight="false"  image="frame" padding="10 10 6 12">
+                            <Text font="bold" alignment="UpperCenter" minHeight="24">СПАСБРОСКИ</Text>
+                            <HorizontalLayout>
+                                <TableLayout class="sheet-table" image="" padding="0">
+
+                                    <Row>
+                                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Сил</b></Text></Cell>
+                                        <Cell><Text font="bold" text="+0"/></Cell>
+                                    </Row>
+
+                                    <Row>
+                                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Лов</b></Text></Cell>
+                                        <Cell><Text font="bold" text="+0"/></Cell>
+                                    </Row>
+
+                                    <Row>
+                                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Тел</b></Text></Cell>
+                                        <Cell><Text font="bold" text="+0"/></Cell>
+                                    </Row>
+                                </TableLayout>
+                                <TableLayout class="sheet-table" image="" padding="0">
+                                    <Row>
+                                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Инт</b></Text></Cell>
+                                        <Cell><Text font="bold" text="+0"/></Cell>
+                                    </Row>
+
+                                    <Row>
+                                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Муд</b></Text></Cell>
+                                        <Cell><Text font="bold" text="+0"/></Cell>
+                                    </Row>
+
+                                    <Row>
+                                        <Cell><Button color="" icon="noskill-icon"/></Cell>
+                                        <Cell><Text font="regular" alignment="MiddleLeft"><b>Хар</b></Text></Cell>
+                                        <Cell><Text font="bold" text="+0"/></Cell>
+                                    </Row>
+                                </TableLayout>
+                            </HorizontalLayout>
+                        </VerticalLayout>
+
+                    </Row>
+                    <!-- .............. КБ, ИНИЦИАТИВА И СКОРОСТЬ .............. -->
+                    <Row preferredHeight="70">
+                        <TableLayout cellSpacing="12" cellBackgroundImage="" cellBackgroundColor="" rowBackgroundColor="">
+                            <Row>
+                                <Cell>
+                                    <Panel image="armor-frame">
+                                        <Text class="stat-name small" offsetXY="0 19">КБ</Text>
+                                        <Text class="stat-mod">12</Text>
+                                    </Panel>
+                                </Cell>
+                                <Cell>
+                                    <Panel image="frame">
+                                        <Text class="stat-name small" offsetXY="0 19">Иниц</Text>
+                                        <Text class="stat-mod">12</Text>
+                                    </Panel>
+                                </Cell>
+                                <Cell>
+                                    <Panel image="frame">
+                                        <Text class="stat-name small" offsetXY="0 19">Скор</Text>
+                                        <Text class="stat-mod">30</Text>
+                                    </Panel>
+                                </Cell>
+                            </Row>
+                        </TableLayout>
+                    </Row>
+                </TableLayout>
+            </Canvas>
         </HorizontalLayout>
     </Panel>
 ]]
