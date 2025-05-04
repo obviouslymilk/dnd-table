@@ -1,4 +1,4 @@
-require('utils.interpolation')
+require('lib.interpolation')
 
 local UiBundler = {}
 

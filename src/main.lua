@@ -1,4 +1,4 @@
-require('utils.interpolation')
+require('lib.interpolation')
 
 local ASSETS_UI = require('ui.assets')
 
@@ -10,6 +10,5 @@ function onLoad()
 
     Wait.frames(function ()
         self.UI.setXml(UiBundler.get())
-    end, 2)
-
+    end, 10)
 end
