@@ -3,6 +3,7 @@ require('lib.interpolation')
 local ASSETS_UI = require('ui.assets')
 
 local UiBundler = require('ui-bundler')
+local Encode = require('lib.encode')
 
 
 function onLoad()
