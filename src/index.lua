@@ -4,5 +4,5 @@ local CommandsHandler = require('lib.commands.CommandsHandler')
 
 function onLoad()
   local players = Player.getPlayers()
-  CommandsHandler.processMessage(players[1], "spell исцеление")
+  CommandsHandler.processMessage(players[1], "spell слово")
 end
