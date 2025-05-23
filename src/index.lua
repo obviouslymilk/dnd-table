@@ -1,4 +1,8 @@
+require('lib.string-interpolation')
+
+local CommandsHandler = require('lib.commands.CommandsHandler')
 
 function onLoad()
-  log("D&D Table is Live!")
+  local players = Player.getPlayers()
+  CommandsHandler.processMessage(players[1], "spell исцеление")
 end
