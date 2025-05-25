@@ -6,17 +6,23 @@ local COMMANDS = {
   spell = "spell"
 }
 
+
 ---@param sender tts__Player
 ---@param message string
 CommandsHandler.processMessage = function (sender, message)
-  if not CommandsHandler.assertIsCommand(message) then return end
+  if not CommandsHandler.assertIsCommand(message) then return true end
 
   local command, arguments = CommandsHandler.parseCommand(message)
 
   if command == COMMANDS.spell then
     SpellCommandHandler.parse(sender, arguments)
+    return false
+
   end
+
+  return false
 end
+
 
 ---@param message string
 ---@return boolean
@@ -31,6 +37,7 @@ CommandsHandler.assertIsCommand = function (message)
 
   return false
 end
+
 
 ---@param message string
 ---@return string command
