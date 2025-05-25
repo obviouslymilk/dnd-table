@@ -120,6 +120,7 @@ SpellCommandHandler.getSpell = function (spellUrl, sender)
     if spell.upper then
       local upper = SpellCommandHandler.formatText(spell.upper)
       printToColor("[b]нᴀ боᴧᴇᴇ ʙыᴄоᴋих уᴩоʙнях:[/b] " .. upper, sender.color)
+      printToColor(" ", sender.color)
     end
 
     local spellClasses = {}
