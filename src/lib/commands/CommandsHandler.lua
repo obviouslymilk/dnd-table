@@ -30,7 +30,7 @@ CommandsHandler.assertIsCommand = function (message)
   local firstWord = message:match("(%w+)(.*)")
 
   for _, command in pairs(COMMANDS) do
-    if command == firstWord then
+    if firstWord == command then
       return true
     end
   end

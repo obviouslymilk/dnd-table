@@ -140,13 +140,19 @@ SpellCommandHandler.formatText = function (text)
   desc = desc:gsub("&nbsp;", " ")
 
   desc = desc:gsub("<span class=\"saving_throw\">", "[fdba74]")
-  desc = desc:gsub("</span>", "[-]")
-
-  desc = desc:gsub("<em>", "[99f6e4]")
-  desc = desc:gsub("</em>", "[-]")
-
+  desc = desc:gsub("<span class=\"advantage\">", "[bef264]")
+  desc = desc:gsub("<span class=\"disadvantage\">", "[fca5a5]")
   desc = desc:gsub('<dice%-roller formula="%d+[Кк]%d+">', "[93c5fd]")
+  desc = desc:gsub('<a href="([^"]*)">', "[93c5fd]")
+  desc = desc:gsub("<em>", "[99f6e4]")
+  desc = desc:gsub("<strong>", "[b]")
+
+  desc = desc:gsub("</span>", "[-]")
+  desc = desc:gsub("</em>", "[-]")
+  desc = desc:gsub("</a>", "[-]")
   desc = desc:gsub("</dice%-roller>", "[-]")
+  desc = desc:gsub("</strong>", "[/b]")
+
 
   desc = desc:gsub("%b<>", "")
   desc = desc:sub(1, -2)
