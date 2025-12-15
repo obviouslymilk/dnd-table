@@ -5,6 +5,6 @@ Http.requestHeaders = {
   ["Accept"] = "application/json, text/plain, */*"
 }
 
-Http.baseUrl = 'https://ttg.club/api/v1/'
+Http.baseUrl = 'https://5e14.ttg.club/api/v1/'
 
 return Http

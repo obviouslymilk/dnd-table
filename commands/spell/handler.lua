@@ -1,4 +1,4 @@
-local Http = require('lib.Http')
+local Api = require('lib.dnd-api')
 
 local SpellCommandHandler = {}
 
@@ -59,7 +59,7 @@ SpellCommandHandler.getSpellsVariants = function (spellName, sender)
 
   local body = JSON.encode(requestData)
 
-  WebRequest.custom(Http.baseUrl .. "spells", "POST", true, body, Http.requestHeaders, function (response)
+  WebRequest.custom(Api.baseUrl .. "spells", "POST", true, body, Api.requestHeaders, function (response)
     local responseData = JSON.decode(response.text)
 
     if (response.is_error) then
@@ -97,7 +97,7 @@ end
 ---@param spellUrl string
 ---@param sender tts__Player
 SpellCommandHandler.getSpell = function (spellUrl, sender)
-  WebRequest.custom(Http.baseUrl .. spellUrl, "POST", true, "{}", Http.requestHeaders, function (response)
+  WebRequest.custom(Api.baseUrl .. spellUrl, "POST", true, "{}", Api.requestHeaders, function (response)
     ---@type Spell
     local spell = JSON.decode(response.text)
 

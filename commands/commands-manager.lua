@@ -1,4 +1,4 @@
-local SpellCommandHandler = require('lib.commands.SpellCommandHandler')
+local SpellCommandHandler = require('commands.spell.handler')
 
 local CommandsHandler = {}
 
